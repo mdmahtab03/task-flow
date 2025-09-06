@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* Light mode (default) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary: #425F57;
+  --primary-foreground: #ffffff;
+
+  --secondary: #749F82;
+  --secondary-foreground: #ffffff;
+
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+
+  --border: #e5e7eb;
+}
+
+/* Dark mode (auto, via system preference) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --primary: #749F82;
+    --primary-foreground: #0a0a0a;
+
+    --secondary: #425F57;
+    --secondary-foreground: #ffffff;
+
+    --muted: #1f2937;
+    --muted-foreground: #9ca3af;
+
+    --border: #374151;
+  }
+}
+
+/* Tailwind variable mapping */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
