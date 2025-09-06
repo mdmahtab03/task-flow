@@ -16,6 +16,7 @@ const TodoPage = () => {
     // Loading Todos on initial render
     useEffect(() => {
         const todos = getTodos();
+        console.log("Loaded todos:", todos);
         setTodos(todos || []);
     }, [])
 

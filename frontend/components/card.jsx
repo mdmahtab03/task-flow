@@ -8,6 +8,7 @@ const priorityStyles = {
 };
 
 const Card = ({ todo, onDelete, onToggle }) => {
+  if (!todo) return null;
   return (
     <div className="w-full border border-secondary p-3 rounded flex items-center justify-between text-sm">
       {/* Left  */}
